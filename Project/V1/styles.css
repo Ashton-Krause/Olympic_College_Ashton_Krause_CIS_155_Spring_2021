@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+/*
+Author: Ashton Krause
+Assignment: Project version 1 (Project V1)
+Date: April 25th, 2021
+file: styles.css
+Description of Use: This is the stylesheet shared by the other html files.
+*/
+
+/*M2LO15 Apply colors using CSS (CSS, see 2-5 Working with Color in CSS)*/
+/*this is the background color my sister chose. She didn't use a website so there isn't one to cite*/
+
+/*M2LO14 Demonstrate and explain the use of progressive enhancement in CS
+    (CSS, see 2-6 Employing Progressive Enhancement)*/
+/*This is a progressive enhancement because browsers that don't use hsl can still use rgb, and browsers
+    that can use hsl use that instead.*/
+html {
+    background-color: rgb(245, 240, 229);
+    background-color: hsl(41,44.4%,92.9%);
+}
+
+/*M2LO6  Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times, show a use of id and a
+    use of class, see 2-9b Attribute selectors)*/
+/*this is a class selector. I'm using the class so the background isn't applied to the footer
+while still using a selector 2/2*/
+
+/*M2LO3 Demonstrate style precedence and inheritance in CSS
+    (CSS, this item should be specified 2 times, once where precedence is applied and once where
+    inheritance is applied; see 2-3d Style Specificity and Precedence, and 2-3e Style Inheritance)*/
+/*{font-size: 1.5em;} is applied to the element unordered list which doesn't have text on its own,
+    but it is inherited by the <li></li> elements, then the <a></a> elements, which gain the new font
+    size. 2/2*/
+.navigation ul {
+    font-size: 1.5em;
+    background-color: white;
+}
+
+/*M2LO11 Demonstrate a pseudo-classes and a pseudo-element selector
+    (CSS, specify 2 times, show one pseudo-class and one pseudo-element,
+    see 2-18 Using Pseudo-Classes and Pseudo-Elements)*/
+/*This is a pseudo element that makes the first letter of every new line capitalized,
+incase I forgot when typing.*/
+::first-letter {
+    text-transform: uppercase;
+
+}
+/*M2LO3 Demonstrate style precedence and inheritance in CSS
+    (CSS, this item should be specified 2 times, once where precedence is applied and once where
+    inheritance is applied; see 2-3d Style Specificity and Precedence, and 2-3e Style Inheritance)*/
+/*all inactive hyperlinks are dark red but when they have the have the pseudoclass hover and/or active,
+    the normal red color takes precedence because the color changes have the same specificity
+    but the normal red comes after the dark red in the css file. 1/2*/
+a {
+    color: darkred;
+    text-decoration: none;
+}
+
+/*M2LO7 Demonstrate a CSS attribute selector other than class or id
+    (CSS, specify 1 time, see 2-9b Attribute selectors)*/
+/*this selects hyperlinks that have the pseudo-class hover and/or active using a comma seperated list. 2/2*/
+
+/*M2LO11 Demonstrate a pseudo-classes and a pseudo-element selector
+    (CSS, specify 2 times, show one pseudo-class and one pseudo-element,
+    see 2-18 Using Pseudo-Classes and Pseudo-Elements)*/
+/*This is a pseudo class. 1/2*/
+a:hover, a:active {
+    color: red;
+}
+
+/*M2LO6  Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times, show a use of id and a
+    use of class, see 2-9b Attribute selectors)*/
+/*this is an id selector. 1/2*/
+#banner {
+    text-align: center;
+}
+
+/*M2LO12 Demonstrate how CSS can change presentation of page elements
+    (CSS, these are styles that impact page elements rather than impacting text on the page)*/
+/*{list-style-type: none;} will change how lists are displayed by removing the bullet points*/
+
+/*M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of
+    contextual selectors as shown in Figure 2-12, Contextual Selectors, of the textbook)*/
+/*this is a contextual selector that makes all unordered lists that don't have any conflicting css rules with greater
+    precedence are centered and have no bullet points. 1/2*/
+ul {
+    text-align: center;
+    list-style-type: none;
+}
+
+/*M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different types of
+    contextual selectors as shown in Figure 2-12, Contextual Selectors, of the textbook)*/
+/*This makes the li elements inside of the footer 1.25em without effecting the nav list using a
+ contextual selector. 2/2*/
+footer > ul > li {
+    font-size: 1.25em;
+}
+
+article > a {
+    font-size: 1.25em;
+}
+
+/*M2LO13 Demonstrate how CSS can change presentation of textual elements
+    (CSS, these are styles that impact text that is rendered on the page)*/
+/*{font-size: 2em;} changes the size of the font of the aside section, which is changing the text rendered*/
+aside {
+    font-size: 2em;
+    text-align: right;
+}
