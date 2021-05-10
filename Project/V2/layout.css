@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+/*M4LO2 Demonstrate the use of background images (CSS)
+This is just the green ribbons on the left and right of the body*/
+html {
+    height: 100%;
+    background-image: url(thing5.png);
+  }
+
+header {
+    min-width: 600px;
+}
+/*M3LO2 Demonstrate floating elements (CSS, note where you have specified a floating element and what its impact is)
+this float makes the navigation list horizontal*/
+/*M3LO8B Demonstrate relative positioning (CSS, note use in your CSS and describe what its impact is on the HTML)
+It places the nav list slightly closer to the home image than just placing it inline so the background ribbon isn't as big. I prefer the way it looks this way.*/
+.navigation li {
+    position: relative;
+    display: block;
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding-bottom: 1.75%;
+}
+/*M4LO5 Demonstrate the use of text or box shadowing (CSS, note one of these two in your CSS and explain its impact on the HTML)
+the figure text in the imagve on aboutbriar.html has a shadow*/
+figure {
+    text-shadow: grey 5px 3px 5px;
+}
+
+footer > ul > li {
+    display: inline;
+}
+footer > ul {
+    text-align: center;
+}
+header > a > img {
+    width: 100%;
+    height: auto;
+}
+
+/*M3LO3 Demonstrate a clearing floats (CSS, note where you have used a clear and what its impact is)
+after the nav bar there is a clear so that the body starts on a new line*/
+header::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+body {
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 1px solid darkred;
+
+}
+/*M4LO8 Demonstrate the use of transformations for 2D or 3D images (CSS, note one of these two in your CSS and explain its impact on the HTML)
+this slightly increases the size of the image in the figure of aboutbriar.html*/
+body > article > figure > img {
+    transform: scale(1.1,1.1);
+    width: 20%;
+    height: auto;
+}
+/*M3LO6 Demonstrate formatting a grid (CSS, note the CSS rules that do this and what their impact is on the HTML; this can be old div-class based grids, or new CSS3 grids)
+I used a div-class row and column set up for my gallery that keeps images in columns 1/3 the size of the body section*/
+div.row {
+    clear: both;
+    border-top: 1px solid darkred;
+    border-bottom: 1px solid darkred;
+}
+div.row::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/*M3LO11 Demonstrate -prefix- style browser extensions use in CSS (CSS note the use in your CSS and what the purpose is)
+this changes the columns to border-box type*/
+div[class^="column-"] {
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+div.column-1-3{
+    width: 33.33%;
+}
+.column-1-3 a > img {
+    width: 100%;
+    height: auto;
+}
+/*M3LO10 Demonstrate an overflow setting (CSS, note explicit use of an overflow setting in your CSS and what the impact is on the HTML)
+if an image is taller than 900px it will be cut off so as to not be too large. This is mainly for thumbnails*/
+img {
+    max-height: 900px;
+    overflow: hidden;
+}
+/*M3LO8A Demonstrate absolute positioning (CSS, note use in your CSS and describe what its impact is on the HTML)
+absolute positioning places the page number for the gallery off the main section so it doesn't overlap images*/
+/*M4LO3 Demonstrate the use of rounded corners for borders (CSS)*/
+aside {
+    position: absolute;
+    right: 2%;
+    top: 33%;
+    border: 2px solid darkred;
+    border-radius: 10px;
+}
