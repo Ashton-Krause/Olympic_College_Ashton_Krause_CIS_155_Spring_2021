@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+/*
+Author: Ashton Krause
+Assignment: Project version 3 (Project V2)
+Date: May 23rd, 2021
+file: styles.css
+Description of Use: This is the stylesheet shared by the other html files.
+*/
+/*M4LO4 Demonstrate the use of gradients (CSS)*/
+body {
+    background: linear-gradient(hsl(356, 80%, 80.4%), white, hsl(41, 44.4%, 92.9%)); 
+    background: linear-gradient(rgb(245, 165, 170), white, rgb(245, 240, 229)); 
+}
+/*M4LO6 Demonstrate the use of opacity/transparency for images (see 4.2) (CSS)*/
+body > article > figure > img {
+    opacity: 0.75;
+}
+
+.navigation ul {
+    font-size: 1.5em;
+}
+
+
+::first-letter {
+    text-transform: uppercase;
+
+}
+
+a {
+    color: darkred;
+    text-decoration: none;
+}
+
+
+a:hover, a:active {
+    color: red;
+}
+
+
+header {
+    background-color: white;
+}
+
+
+ul {
+
+    list-style-type: none;
+}
+
+
+footer > ul > li {
+    font-size: 1.25em;
+}
+
+article > a {
+    font-size: 1.25em;
+}
+
+
+aside {
+    font-size: 2em;
+}
+
+header {
+    border-bottom: solid darkred;
+}

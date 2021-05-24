@@ -1,0 +1,28 @@
+@charset "utf-8";
+/*
+Author: Ashton Krause
+Assignment: Project version 3 (Project V2)
+Date: May 23rd, 2021
+file: tables.css
+Description of Use: This is the stylesheet used by the about page for the tables.
+*/
+/*M6LO7 Demonstrate how to format a table with CSS (CSS, group your table styles together and note the overall impact they have on the HTML)*/
+/*this makes the tables in the about.html page have a white background, a border, and a line seperating each row, making it easier to read*/
+table {
+    background: white;
+    border: 1px solid darkred;
+
+}
+td, th {
+border-bottom: 1px solid darkred;
+
+/*M5LO4 Use CSS for pull-down menus (or collapsible/expandable areas) (CSS, note where the menu is on your site and how it behaves)*/
+/*Tables are collapsed until you mouse over them, in which case they will pull down. This saves even more space so the module level objectives don't just add up making the page super long*/
+
+}
+td {
+    display: none;
+}
+table:hover td  {
+    display: block;
+}

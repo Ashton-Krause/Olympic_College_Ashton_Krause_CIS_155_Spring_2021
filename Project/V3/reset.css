@@ -1,0 +1,17 @@
+@charset "utf-8";
+/*
+Author: Ashton Krause
+Assignment: Project version 3 (Project V2)
+Date: May 9th, 2021
+file: reset.css
+Description of Use: This is just a simple reset.css file.
+*/
+
+html {
+    margin: 0;
+    border: 0;
+    padding: 0;;
+    background: transparent;
+    font-size: 1em;
+    position: static;
+}
