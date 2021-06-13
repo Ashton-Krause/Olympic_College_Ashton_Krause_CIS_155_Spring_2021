@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!--
+        Author: Ashton Krause
+        Assignment: Project version 2 (Project V2)
+        Date: May 9th, 2021
+        file: commissions.html
+        Description of Use: This is the page that's going to be used for commissions.
+        -->
+        -->
+        <meta charset="utf-8" />
+        <meta name="keywords" content="Briar, Rose, Krause, Art, Digital art" />
+        <title>BriarRoseArt</title>
+        <link href="reset.css" rel="stylesheet" />
+        <link href="styles.css" rel="stylesheet" />
+        <link href="layout.css" rel="stylesheet" />
+        <style>
+            body {font-family: "Times New Roman", Times, serif;}
+        </style>
+    </head>
+    <body>
+        <header id="top">
+                <a href="index.html"><img src="briarbanner.png" alt="BriarRoseArt" id="banner1"/></a>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="about.html">About Project: V4</a></li>
+                    <li><a href="gallery/gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>Commissions</li>
+                    <li><a href="aboutbriar.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        Fill out the following fields and click submit to send a specialized drawing request to Briar.
+        <div>
+<!--
+M7LO5 Demonstrate the use of a text box in a form
+Demonstrate the use of a text area in a form
+Demonstrate the use of a submit button in a form
+-->
+
+            <p>All areas are required</p>
+        <form action="fakewebsite" method="post">
+            <label for="firstname">First Name</label>
+            <input type="text" name="firstname" id="firstname" required />
+            <label for="lastname">Last Name</label>
+            <input type="text" name="lastname" id="lastname" required />
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required />
+            <label for="phonenumber">Phone Number</label>
+            <input type="tel" name="phonenumber" id="phonenumber" required />
+            <label for="description">Description of Image</label>
+            <textarea type="text" name="description" id="description" required></textarea>
+            <input type="submit" value="Submit" id="submit">
+
+        </form>
+        </div>
+        <footer>
+            <ul>
+                <li><a href="#top">Return to top</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

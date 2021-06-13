@@ -1,0 +1,29 @@
+@charset "utf-8";
+/*
+Author: Ashton Krause
+Assignment: Project version 3 (Project V2)
+Date: May 23rd, 2021
+file: tables.css
+Description of Use: This is the stylesheet used by the about page for the tables.
+*/
+
+table {
+    background: white;
+    border: 1px solid darkred;
+
+}
+td, th {
+border-bottom: 1px solid darkred;
+
+
+}
+td {
+    display: none;
+}
+table:hover td  {
+    display: block;
+
+}
+tr td:first-child{
+    font-weight: bold;
+}

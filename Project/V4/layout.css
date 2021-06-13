@@ -1,0 +1,165 @@
+@charset "utf-8";
+/*
+Author: Ashton Krause
+Assignment: Project version 3 (Project V2)
+Date: May 23rd, 2021
+file: layout.css
+Description of Use: This is the layout shared by the other html files.
+*/
+
+html {
+    height: 100%;
+    background-image: url(thing5.png);
+  }
+
+header {
+    min-width: 600px;
+}
+
+.navigation li {
+    position: relative;
+    display: block;
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding-bottom: 1.75%;
+}
+
+figure {
+    text-shadow: grey 5px 3px 5px;
+}
+
+footer > ul > li {
+    display: inline;
+}
+footer > ul {
+    text-align: center;
+}
+header > a > img {
+    width: 100%;
+    height: auto;
+}
+footer {
+    border-top: 2px solid darkred;
+}
+
+
+header::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+body {
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 2px solid darkred;
+
+}
+
+body > article > figure > img {
+    transform: scale(1.1,1.1);
+    width: 20%;
+    height: auto;
+}
+
+div.row {
+    clear: both;
+}
+div.row::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+div[class^="column-"] {
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+div.column-1-3{
+    width: 33.33%;
+}
+.column-1-3 a > img {
+    width: 100%;
+    height: auto;
+    border: 2px solid darkred;
+}
+.column-1-3:hover a > img {
+    border: 2px solid red;
+}
+
+img {
+    max-height: 900px;
+    overflow: hidden;
+}
+
+aside > p {
+    position: fixed;
+    right: 1.25%;
+    top: 30%;
+    border: 2px solid darkred;
+    border-radius: 10px;
+}
+/*these are so that the text in the about section and the page number in the gallery don't become so relatively large that they overlap images or become unreadable when it wraps onto a new line.*/
+/*medium screen < 1500px*/
+@media only screen and (max-width: 1500px) {
+    aside {
+        font-size: 1em;
+    }
+}
+/*small screen < 770px*/
+@media only screen and (max-width: 770px) {
+    aside, article {
+        font-size: 0.75em;
+    }
+/*really small screen < 580px*/
+}
+@media only screen and (max-width: 580px) {
+    aside, article {
+        font-size: 0.5em;
+    }
+}
+
+/*this centers the audio clip on index.html*/
+iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*M7LO11 Demonstrate how to format a form with CSS (group your form styles together in your CSS file, and document their overall impact on the form)*/
+/*this moves the description of each box to the left of a box and spaces everything. The div::after section just prevents the body from collapsing due to the floated elements.*/
+label, #submit {
+    display: block;
+    margin: 10px;
+    float: left;
+    clear: left;
+    width: 20%;
+}
+input, textarea {
+    display: block;
+    margin: 10px;
+    float: left;
+    width: 20%
+}
+div::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+/*M8LO10 Demonstrate a CSS animation or transition (CSS, identify which is being done and its impact on the rendered HTML; note it has to include a time aspect, not be immediate)*/
+/*the submit button on the transitions page has a lingering red color when mousing over it*/
+
+#submit {
+    background: white;
+    color:black;
+    transition: background 1s;
+}
+
+#submit:hover {
+    background: red;
+    color: white;
+}
